@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+    font-family: 'Seoge UI', Tahoma, Verdana, Geneva, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; 
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: #2c3e50; 
+    color: #ffffff; 
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav a {
+    color: #b0c4de; 
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+    header nav a:hover {
+        color: #778899; 
+    }
+
+/* Section Styling */
+section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    border-bottom: 2px solid #b0c4de; 
+    padding-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+/* Experience and Project Cards */
+.experience-card,
+.project {
+    background: #f5f5f5; 
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid #b0c4de; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+    .experience-card h3,
+    .project h3 {
+        margin: 0;
+        color: #2c3e50; 
+    }
+
+    .experience-card p,
+    .project p {
+        color: #555; 
+    }
+
+/* Links */
+a {
+    color: #2c3e50; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    a:hover {
+        color: #778899; 
+    }
+
+/* Contact Section Styling */
+#contact p {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
