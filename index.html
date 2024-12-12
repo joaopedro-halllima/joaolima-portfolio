@@ -4,66 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joao Pedro Hall Lima | Personal Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css"
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Jo�o Pedro Hall Lima</h1>
         <nav>
-            <a href="#about">About</a>
-            <a href="profesional">Profesional Experiences</a>
-            <a href="leadership">Leadership Experiences</a>
-            <a href="#projects">Projects</a>
-            <a href="interests">Interests</a>
-            <a href="#contact">Contact</a>
+            <h1>Joao Pedro Hall Lima</h1>
+            <ul>
+                <a href="#about">About</a>
+                <a href="profesional">Profesional Experiences</a>
+                <a href="leadership">Leadership Experiences</a>
+                <a href="#projects">Projects</a>
+                <a href="interests">Interests</a>
+                <a href="#contact">Contact</a>
+            </ul>
         </nav>
     </header>
 
     <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <div style="text-align: center;">
-            <img src="assets/imageportfolio1.WEBP" alt="João Pedro Hall Lima" style="width: 150px; border-radius: 50%; margin: 1rem;">
-            <img src="assets/imageportfolio2.jpg" alt="João Pedro Hall Lima" style="width: 150px; border-radius: 50%; margin: 1rem;">
-            <img src="assets/columbia-logo.png" alt="Columbia Logo" style="width: 50px; margin-bottom: 1rem;">
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="profile-images">
+                <img src="assets/imageportfolio1.WEBP" alt="João Pedro Hall Lima" class="profile-pic">
+                <img src="assets/imageportfolio2.jpg" alt="João Pedro Hall Lima" class="profile-pic">
+            </div>
+            <p>Hello! My name is João Pedro Hall Lima, and I'm a junior at Columbia majoring in Computer Science and minoring in Economics. I grew up in Rio de Janeiro, Brazil, and am a proficient developer.</p>
         </div>
-        <p>Hello! My name is Joao Pedro Hall Lima and I'm a junior at Columbia majoring in Computer Science and minoring in Economics. I grew up in Rio de Janeiro, Brazil and am a proficient developer.</p>
     </section>
 
 
     <!-- Professional Experience Section -->
-    <section id="professional">
-        <h2>Professional Experience</h2>
-
-        <div class="experience-card">
-            <img src="assets/accenture-logo.png" alt="Accenture Logo" style="width: 50px; margin-bottom: 1rem;">
-            <h3>Incoming Technology Summer Analyst - Accenture</h3>
-            <p>Starting position as a Technology Analyst, focusing on emerging technologies and innovative solutions for business challenges.</p>
-        </div>
-
-        <div class="experience-card">
-            <h3>Software Development Intern - Agrotools</h3>
-            <p>Developed an AI-powered chatbot to assist farmers in low-income communities with agricultural information, improving accessibility and response times.</p>
-        </div>
-
-        <div class="experience-card">
-            <h3>Software Engineering Fellow - Headstarter AI</h3>
-            <p>Worked on AI-driven product development, enhancing features to improve user engagement and streamline workflows.</p>
+    <section id="professional" class="section">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-card">
+                <img src="assets/accenture-logo.png" alt="Accenture Logo" class="logo-pic">
+                <h3>Incoming Technology Summer Analyst - Accenture</h3>
+                <p>Starting position as a Technology Analyst, focusing on emerging technologies and innovative solutions for business challenges.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Software Development Intern - Agrotools</h3>
+                <p>Developed an AI-powered chatbot to assist farmers in low-income communities with agricultural information, improving accessibility and response times.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Software Engineering Fellow - Headstarter AI</h3>
+                <p>Worked on AI-driven product development, enhancing features to improve user engagement and streamline workflows.</p>
+            </div>
         </div>
     </section>
 
     <!--Leadership Experience Section -->
-    <section id="leadership">
-        <h2>Leadership Experience</h2>
-        <div class="experience-card">
-            <img src="assets/columbia-logo.png" alt="Columbia Logo" style="width: 50px; margin-bottom: 1rem;">
-            <h3>Leadership Council - Columbia Men's Soccer Team</h3>
-            <p>Served on the leadership council, providing mentorship and fostering team culture and accountability.</p>
-        </div>
-
-        <div class="experience-card">
-            <h3>SHPE & ColorStack Member</h3>
-            <p>Actively contributed to promoting Hispanic representation in STEM fields.</p>
+    <section id="leadership" class="section">
+        <div class="container">
+            <h2>Leadership Experience</h2>
+            <div class="experience-card">
+                <img src="assets/columbia-logo.png" alt="Columbia Logo" class="logo-pic">
+                <h3>Leadership Council - Columbia Men's Soccer Team</h3>
+                <p>Served on the leadership council, providing mentorship and fostering team culture and accountability.</p>
+            </div>
+            <div class="experience-card">
+                <h3>SHPE & ColorStack Member</h3>
+                <p>Actively contributed to promoting Hispanic representation in STEM fields.</p>
+            </div>
         </div>
     </section>
 
@@ -90,12 +97,25 @@
         <p>I absolutely love soccer, surfing, cooking, and essentially just nature. My biggest dream is to travel the world, meeting fun and new people that make me happy! Hopefully one day I will achieve that dream.</p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" ">
-        <h2>Contact</h2>
-        <p>Email: jh4645@columbia.edu or jp.hall.lima@gmail.com</p>
-        <p><a href="https://www.linkedin.com/in/joao-pedro-hall-lima/" target="_blank">LinkedIn</a></p>
-    </section>
+    <script>
+        // Simple fade-in animation
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = "translateY(20px)";
+                setTimeout(() => {
+                    section.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+                    section.style.opacity = 1;
+                    section.style.transform = "translateY(0)";
+                }, 200);
+            });
+        });
+    </script>
 
-    <script src="js/scripts.js"></script>   
+    <footer>
+        <p>&copy; 2024 João Pedro Hall Lima | Connect with me on <a href="https://www.linkedin.com/in/joao-pedro-hall-lima" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
