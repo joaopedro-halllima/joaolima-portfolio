@@ -1,120 +1,153 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background: #f0f4f8;
-    color: #2c3e50;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f1f1f; /* Dark grey background */
+    color: #d9e2ec; /* Light grey-blue text */
     line-height: 1.6;
 }
 
-* Header Styling */
+/* Header Styling */
 header {
-    background: linear-gradient(135deg, #2c3e50, #4e6b8f);
+    background: #2c3e50; /* Dark blue-grey */
     color: #fff;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-header nav a {
-    color: #f0f8ff;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
+    header nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-header nav a:hover {
-    color: #00bcd4;
-}
+    header h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    header nav a {
+        color: #d9e2ec;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+        header nav a:hover {
+            color: #80b7ff;
+            transform: scale(1.1);
+        }
 
 /* Section Styling */
-section {
-    padding: 2rem;
+.section {
+    padding: 4rem 2rem;
     margin: 2rem auto;
-    max-width: 800px;
-    background: #ffffff;
+    max-width: 900px;
+    background: #2a2a2a;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Animation for Sections */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Headings */
+/* Heading Styling */
 h2 {
-    border-bottom: 2px solid #00bcd4;
+    color: #80b7ff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
     padding-bottom: 0.5rem;
-    color: #2c3e50;
-    font-weight: 600;
 }
+
+    h2::after {
+        content: '';
+        width: 60px;
+        height: 4px;
+        background: #80b7ff;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
 
 /* Experience and Project Cards */
-.experience-card,
-.project {
-    background: #f5f5f5;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 5px solid #00bcd4;
+.experience-card, .project {
+    background: #1f1f1f;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 5px solid #80b7ff;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-    .experience-card:hover,
-    .project:hover {
+    .experience-card:hover, .project:hover {
         transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
-/* Links */
-a {
-    color: #00bcd4;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Profile Images */
+.profile-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-    a:hover {
-        color: #00796b;
-    }
-
-/* Add Images to Sections */
-section#about {
-    background: url('https://via.placeholder.com/800x200') no-repeat center/cover;
-    color: #fff;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    border: none;
-}
-
-/* General Image Styling */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Profile Images Styling */
-#about img {
+.profile-pic {
     width: 150px;
     border-radius: 50%;
-    margin: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
 }
 
-/* Experience Card Image Styling */
-.experience-card img {
-    width: 50px;
-    display: block;
-    margin-bottom: 1rem;
+    .profile-pic:hover {
+        transform: scale(1.1);
+    }
+
+/* Footer Styling */
+footer {
+    background: #2c3e50;
+    color: #d9e2ec;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+    footer a {
+        color: #80b7ff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        footer a:hover {
+            color: #b3c0d1;
+        }
+
+/* Fade-In Animation for Sections */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
