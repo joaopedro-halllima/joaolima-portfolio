@@ -1,86 +1,120 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Seoge UI', Tahoma, Verdana, Geneva, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8; 
+    background: #f0f4f8;
     color: #2c3e50;
     line-height: 1.6;
 }
 
-/* Header Styling */
+* Header Styling */
 header {
-    background: #2c3e50; 
-    color: #ffffff; 
+    background: linear-gradient(135deg, #2c3e50, #4e6b8f);
+    color: #fff;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header nav a {
-    color: #b0c4de; 
+    color: #f0f8ff;
     margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-    header nav a:hover {
-        color: #778899; 
-    }
+header nav a:hover {
+    color: #00bcd4;
+}
 
 /* Section Styling */
 section {
     padding: 2rem;
     margin: 2rem auto;
     max-width: 800px;
-    background: #ffffff; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Animation for Sections */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Headings */
 h2 {
-    border-bottom: 2px solid #b0c4de; 
+    border-bottom: 2px solid #00bcd4;
     padding-bottom: 0.5rem;
     color: #2c3e50;
+    font-weight: 600;
 }
 
 /* Experience and Project Cards */
 .experience-card,
 .project {
-    background: #f5f5f5; 
+    background: #f5f5f5;
     padding: 1rem;
     margin: 1rem 0;
-    border-left: 5px solid #b0c4de; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
+    border-left: 5px solid #00bcd4;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-    .experience-card h3,
-    .project h3 {
-        margin: 0;
-        color: #2c3e50; 
-    }
-
-    .experience-card p,
-    .project p {
-        color: #555; 
+    .experience-card:hover,
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
 /* Links */
 a {
-    color: #2c3e50; 
+    color: #00bcd4;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
     a:hover {
-        color: #778899; 
+        color: #00796b;
     }
 
-/* Contact Section Styling */
-#contact p {
-    margin: 0.5rem 0;
-    color: #2c3e50;
+/* Add Images to Sections */
+section#about {
+    background: url('https://via.placeholder.com/800x200') no-repeat center/cover;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+/* General Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Profile Images Styling */
+#about img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience Card Image Styling */
+.experience-card img {
+    width: 50px;
+    display: block;
+    margin-bottom: 1rem;
 }
